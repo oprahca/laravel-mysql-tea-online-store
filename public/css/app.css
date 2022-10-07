@@ -1,0 +1,68 @@
+body {
+    font-family: 'Lufga', sans-serif;
+}
+
+.bg-secondary {
+    background-color: #F7F7F7 !important;
+}
+
+.copyright {
+    background-color: #F7F7F7;
+}
+
+.bg-primary {
+    background-color: #3A702F !important;
+}
+
+nav {
+    font-weight: 700;
+}
+
+img-card {
+    height: 18vw;
+    object-fit: cover;
+}
+
+h1.subtitle {
+    letter-spacing: .2rem;
+    font-weight: 200 !important;
+    font-size: 2rem;
+}
+
+.text-main-green {
+    color: #3A702F !important;
+}
+
+.text-main-gray {
+    color: #312b29 !important;
+}
+
+a.link-green {
+    color: #3A702F !important;
+}
+a.link-green:hover {
+    color: #312b29 !important;
+    text-decoration: underline #312b29 3px;
+    text-underline-offset: .8rem;
+}
+
+a.link-gray {
+    color: #312b29 !important;
+}
+
+a.link-gray:hover {
+    color: #3A702F !important;
+    text-decoration: underline #312b29 3px;
+    text-underline-offset: .8rem;
+}
+
+a.product-name {
+    color: #312b29;
+    font-weight: 400;
+    text-decoration: none;
+}
+    a.product-name:hover {
+        color:#3A702F;
+        text-decoration: none;
+        font-weight: 700;
+    }
