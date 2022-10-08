@@ -9,6 +9,9 @@
     <link href="/css/app.css" rel="stylesheet" />
     <link href="http://fonts.cdnfonts.com/css/metropolis-4" rel="stylesheet">
     <title>@yield('title','Leaf Tea House')</title>
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/metropolis-4');
+    </style>
 </head>
 
 
