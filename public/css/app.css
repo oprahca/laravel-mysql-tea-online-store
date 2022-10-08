@@ -3,13 +3,13 @@
     font-family: 'Red Hat Display';
     font-style: normal;
     font-weight: 400;
-    src: asset-url('/font/RedHatDisplayRegular.ttf');
+    src: local('Red Hat Display'), url('/font/RedHatDisplayRegular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Red Hat Display';
     font-style: normal;
     font-weight: 300;
-    src: local('Red Hat Display'), url('/font/RedHatDisplayLight.ttf') format('woff');
+    src: local('Red Hat Display'), url('/font/RedHatDisplayLight.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Red Hat Display';
@@ -33,7 +33,7 @@
 * {
     font-family: 'Red Hat Display', sans-serif;
     letter-spacing: 2.rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .bg-secondary {
