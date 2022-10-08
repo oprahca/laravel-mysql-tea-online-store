@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link href="/css/app.css" rel="stylesheet" />
     <title>@yield('title','Leaf Tea House')</title>
+    <link href="https://fonts.cdnfonts.com/css/metropolis-4" rel='stylesheet' type='text/css'>
 </head>
 
 
