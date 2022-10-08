@@ -1,4 +1,34 @@
 @import url('http://fonts.cdnfonts.com/css/red-hat-display-2');
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    src: asset-url('/font/RedHatDisplayRegular.ttf');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Red Hat Display'), url('/font/RedHatDisplayLight.ttf') format('woff');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Red Hat Display'), url('/font/RedHatDisplayMedium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Red Hat Display'), url('/font/RedHatDisplaySemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Red Hat Display'), url('/font/RedHatDisplayBold.ttf') format('truetype');
+}
 
 * {
     font-family: 'Red Hat Display', sans-serif;
