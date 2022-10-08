@@ -1,6 +1,39 @@
-@import url('http://fonts.cdnfonts.com/css/metropolis-4');
+@import url('http://fonts.cdnfonts.com/css/red-hat-display-2');
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Red Hat Display'), url('../font/RedHatDisplayRegular.ttf') format('woff');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Red Hat Display'), url('../font/RedHatDisplayLight.ttf') format('woff');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Red Hat Display'), url('../font/RedHatDisplayMedium.ttf') format('woff');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Red Hat Display'), url('../font/RedHatDisplaySemiBold.ttf') format('woff');
+}
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Red Hat Display'), url('../font/RedHatDisplayBold.ttf') format('woff');
+}
+
 * {
-    font-family: 'Metropolis', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 2.rem;
+    font-weight: 400;
 }
 
 .bg-secondary {
@@ -16,7 +49,7 @@
 }
 
 nav {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 img-card {
@@ -26,7 +59,7 @@ img-card {
 
 h1.subtitle {
     letter-spacing: .2rem;
-    font-weight: 200 !important;
+    font-weight: bold !important;
     font-size: 2rem;
 }
 
@@ -38,24 +71,27 @@ h1.subtitle {
     color: #312b29 !important;
 }
 
+a.nav-link {
+    font-weight: 800;
+}
+
 a.link-green {
     color: #3A702F !important;
 }
-a.link-green:hover {
-    color: #312b29 !important;
-    text-decoration: underline #312b29 3px;
-    text-underline-offset: .8rem;
-}
+    a.link-green:hover {
+        color: #312b29 !important;
+        text-decoration: underline #312b29 3px;
+        text-underline-offset: .8rem;
+    }
 
 a.link-gray {
     color: #312b29 !important;
 }
-
-a.link-gray:hover {
-    color: #3A702F !important;
-    text-decoration: underline #312b29 3px;
-    text-underline-offset: .8rem;
-}
+    a.link-gray:hover {
+        color: #3A702F !important;
+        text-decoration: underline #312b29 3px;
+        text-underline-offset: .8rem;
+    }
 
 a.product-name {
     color: #312b29;
