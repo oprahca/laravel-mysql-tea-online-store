@@ -12,7 +12,7 @@
 </head>
 
 
-<body class="d-flex flex-column h-100">
+<body>
     <!-- header -->
     <nav class="navbar navbar-expand-sm navbar-light bg-secondary py-3">
         <div class="container">
