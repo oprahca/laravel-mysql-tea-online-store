@@ -36,6 +36,13 @@
     font-weight: 600;
 }
 
+main {
+    min-height: 48vh;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+ }
+
 .bg-secondary {
     background-color: #F7F7F7 !important;
 }

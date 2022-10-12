@@ -17,16 +17,29 @@
     <!-- header -->
     <nav class="navbar navbar-expand-sm navbar-light bg-secondary py-3">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home.index') }}"><img class="col-md-2" src="/img/logo.png" alt="log" /></a>
+            <a class="navbar-brand" href="{{ route('home.index') }}">
+                <img class="col-md-3 img-fluid col-sm-12 col-8" src="/img/logo.png" alt="log">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active link-green py-3" href="{{ route('home.index') }}">Home</a>
-                    <a class="nav-link active link-green py-3" href="{{ route('product.index') }}">Product</a>
-                    <a class="nav-link active link-green py-3" href="{{ route('home.about') }}">About</a>
-                    <a class="nav-link active link-green py-3" href="{{ route('admin.home.index') }}">Admin</a>
+                    <a class="nav-link active link-green my-2" href="{{ route('home.index') }}">Home</a>
+                    <a class="nav-link active link-green my-2" href="{{ route('product.index') }}">Product</a>
+                    <a class="nav-link active link-green my-2" href="{{ route('home.about') }}">About</a>
+                    <a class="nav-link active link-green my-2" href="{{ route('cart.index') }}">Cart</a>
+                    @guest
+                        <a href="{{ route('login') }}" class="text-white px-3 btn btn-success active my-2 mx-1">Login</a>    
+                        <a href="{{ route('register') }}" class="text-white px-3 btn btn-success active my-2">Register</a>    
+                        @else
+                        <div class="vr mx-2"></div>
+                        <a class="nav-link active link-green my-2" href="{{ route('admin.home.index') }}">Admin</a>
+                        <a class="nav-link active link-green my-2 me-3" href="{{ route('account.orders') }}">Orders</a>
+                        <form action="{{ route('logout') }}" method="POST" id="logout">
+                            <a role="button" onclick="document.getElementById('logout').submit()" class="text-white px-3 btn btn-success active my-2">Logout</a>
+                        </form>
+                    @endguest
                 </div>
             </div>
         </div>
@@ -38,12 +51,12 @@
         </div>
     </header>
 
-    <main class="my-5 container">
+    <main class="my-5 container h-85">
          @yield('content')
     </main>
 
     <!-- footer -->
-    <footer class="footer mt-auto justify-content-center ">
+    <footer class="footer mt-auto justify-content-center sticky-bottom h-100">
         <div class="copyright py-4 text-center link-gray">
             <div class="container">
                 <small>

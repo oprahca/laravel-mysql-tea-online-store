@@ -16,7 +16,7 @@
         <!-- sidebar -->
         <div class="p-4 pt-5 col-lg-3 sidebar fixed text-white bg-dark">
             <a href="{{ route('admin.home.index') }}" class="pb-2 text-white text-decoration-none">
-                <span class="fs-3">Admin Panel</span>
+                <span class="fs-3 fw-bold">Admin Panel</span>
             </a>
             <ul class="nav flex-column my-2">
                 <li>
@@ -27,7 +27,7 @@
                 </li>
                 <hr />
                 <li>
-                    <a href="{{ route('home.index') }}" class="mt-2 btn btn-outline-secondary text-white">
+                    <a href="{{ route('home.index') }}" class="mt-2 btn btn-outline-light">
                         Go back Home Page
                     </a>
                 </li>

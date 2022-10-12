@@ -15,8 +15,24 @@
                 <p class="card-text text-muted">
                     {{ $viewData["product"]->getDescription() }}
                 </p>
-                <p class="card-text d-flex align-items-end flex-column">
+                {{-- <p class="card-text d-flex align-items-end flex-column">
                     <small class="btn btn-outline-secondary px-4">Add to Cart</small>
+                </p> --}}
+                <p class="card-text">
+                    <form method="POST" action="{{ route('cart.add',['id'=> $viewData['product']->getId()]) }}">
+                        <div class="row">
+                            @csrf
+                            <div class="col-auto">
+                                <div class="input-group col-auto">
+                                    <div class="input-group-text px-3">Quantity</div>
+                                    <input type="number" min="1" max="10" class="form-control quantity-input" name="quantity" value="1">
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn bg-dark text-white px-4" type="submit">Add to cart</button>
+                            </div>
+                        </div>
+                    </form>
                 </p>
             </div>
         </div>
