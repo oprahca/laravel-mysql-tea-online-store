@@ -38,7 +38,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => base_path('public/update/'),
+            'root' => base_path('public/img/'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
             'throw' => false,
