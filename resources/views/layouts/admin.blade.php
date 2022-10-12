@@ -20,10 +20,10 @@
             </a>
             <ul class="nav flex-column my-2">
                 <li>
-                    <a href="{{ route('admin.home.index') }}" class="nav-link text-white">Home</a>
+                    <a href="{{ route('admin.home.index') }}" class="nav-link text-white"><i class="bi bi-house-door-fill me-2"></i> Home</a>
                 </li>
                 <li>
-                    <a href="{{  route('admin.product.index')}}" class="nav-link text-link">Product</a>
+                    <a href="{{  route('admin.product.index')}}" class="nav-link text-link"><i class="bi bi-card-list me-2"></i> Product</a>
                 </li>
                 <hr />
                 <li>
