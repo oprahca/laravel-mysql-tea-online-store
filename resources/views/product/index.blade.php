@@ -7,7 +7,7 @@
     <div class="col-md-3 col-lg-4 mb-2">
         <div class="card">
             <a href="{{ route('product.show', ['id'=>$product->getId()]) }}">
-                <img src="{{ asset('/img/'.$product->getImage()) }}" alt="image" class="card-img-top img-card">
+                <img src="{{ asset('/storage/'.$product->getImage()) }}" alt="image" class="card-img-top img-card">
             </a>
             <div class="card-body text-center bg-light">
                 <a href="{{ route('product.show', ['id'=>$product->getId()]) }}" class="product-name">{{ $product->getName() }}</a>

@@ -22,7 +22,7 @@ class AdminProductController extends Controller
         $request->validate([
             "name" => "required|max:255",
             "description" => "required",
-            "price" => "required|float|gt:0",
+            "price" => "required|gt:0",
             "image" => "image",
         ]);
 
@@ -30,12 +30,8 @@ class AdminProductController extends Controller
         $newProduct->setName($request->input('name'));
         $newProduct->setDescription($request->input('description'));
         $newProduct->setPrice($request->input('price'));
-        $newProduct->setImage('game.png');
+        $newProduct->setImage('tea.jpg');
         $newProduct->save();
-
-        // $createData = $request->only(['name','description','price']);
-        // $createData['image'] = "game.png";
-        // Product::created($createData);
 
         if($request->hasFile('image'))
         {
@@ -70,7 +66,7 @@ class AdminProductController extends Controller
         $request->validate([
             "name" => "required|max:255",
             "description" => "required",
-            "price" => "required|float|gt:0",
+            "price" => "required|gt:0",
             "image" => "image",
         ]);
 

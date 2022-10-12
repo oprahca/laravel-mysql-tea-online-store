@@ -6,6 +6,14 @@
         Create Products
     </div>
     <div class="card-body">
+        @if($errors->any())
+        <ul class="alert alert-danger list-unstyled">
+            @foreach($errors->all() as $error)
+            <li>- {{ $error }}</li>
+            @endforeach
+        </ul>
+        @endif
+
         <form method="POST" action="{{  route('admin.product.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="row">
@@ -13,7 +21,7 @@
                     <div class="mb-3 row">
                         <label for="name" class="fw-bold col-lg-2 col-md-6 col-sm-12 col-form-label">Name: </label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
-                            <input type="name" class="form-control" type="text" value="{{ old('name') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
                 </div>
@@ -29,7 +37,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mb-3 row">
-                        <label for="" class="col-lg-2 col-md-6 col-sm-12 col-form-label">Image: </label>
+                        <label  class="col-lg-2 col-md-6 col-sm-12 col-form-label fw-bold">Image: </label>
                         <div class="col-lg-10 col-md-6 col-sm-12">
                             <input type="file" name="image" class="form-control">
                         </div>
@@ -41,15 +49,9 @@
             </div>
             <div class="mb-3 text-start">
                 <label for="description" class="form-label fw-bold">Description: </label>
-                <textarea name="descroption" rows="3" class="form-control"></textarea>
+                <textarea name="description" rows="3" class="form-control">{{ old('description') }}</textarea>
             </div>
-            @if($errors->any())
-            <ul class="alert alert-danger list-unstyled">
-                @foreach($errors->all() as $error)
-                <li><small>* {{ $error }}</small></li>
-                @endforeach
-            </ul>
-            @endif
+            
             <button type="submit" class="btn btn-dark px-4">Submit</button>
         </form>
     </div>
@@ -74,14 +76,18 @@
                     <td>{{ $product->getId() }}</td>
                     <td>{{ $product->getName() }}</td>
                     <td>
-                        <button class="edit btn btn-sm btn-outline-dark px-3">
-                            <img src="{{ asset('/img/edit.svg') }}" alt="edit" class="img-profile"> Edit
-                        </button>
+                        <a class="edit btn btn-sm btn-outline-dark px-3">
+                            <i class="bi bi-pencil-fill pe-1"></i>  Edit
+                        </a>
                     </td>
                     <td>
-                        <button class="delete btn btn-sm btn-outline-dark px-3">
-                            <img src="{{ asset('/img/delete.svg') }}" alt="delete" class="text-white img-profile"> Delete
-                        </button>
+                        <form action="{{ route('admin.product.delete', $product->getId()) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="delete btn btn-sm btn-outline-dark px-3">
+                                <i class="bi bi-trash-fill pe-1"></i> Delete
+                            </button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach

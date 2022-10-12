@@ -6,10 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = [
-        'name','description','price','image',
-    ];
-
     public function getId() 
     {
         return $this->attributes['id'];
